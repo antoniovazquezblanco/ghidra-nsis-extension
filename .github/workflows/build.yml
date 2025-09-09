@@ -58,8 +58,9 @@ jobs:
 
     steps:
     - name: Download built extension
-      uses: actions/download-artifact@v4
-
+      uses: actions/download-artifact@v4.1.7
+      with:
+        name: extension
     - name: Upload extension to release
       uses: skx/github-action-publish-binaries@master
       env:
